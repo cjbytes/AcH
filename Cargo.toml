@@ -1,0 +1,16 @@
+[package]
+name = "RustProject"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+dirs = "5.0"
+reqwest = { version = "0.11", features = ["json", "stream"] }
+toml = "0.8"
+
+[[bin]]
+name = "ACH"
+path = "src/main.rs"
+
+[cargo]
+run = ["--bin", "ACH"]

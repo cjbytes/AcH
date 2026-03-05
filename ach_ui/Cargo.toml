@@ -1,0 +1,17 @@
+[package]
+name = "ach_ui"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+egui = "0.24"
+eframe = { version = "0.23", features = ["wgpu", "glow", "persistence", "default_fonts"] }
+ach_agent = { path = "../ach_agent" }
+tokio = { version = "1", features = ["full"] }
+tracing = "0.1"
+tracing-subscriber = "0.3"
+winapi = { version = "0.3", features = ["winuser"] }
+
+[[bin]]
+name = "ACH"
+path = "src/main.rs"
